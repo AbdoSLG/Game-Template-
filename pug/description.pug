@@ -1,0 +1,33 @@
+extends main.pug
+
+block content 
+    .content2
+        .container.text-light 
+            .vid 
+                video(src="images/download-files/Subway Surfers Official.mp4" autoplay controls ) 
+            .text.pt-5.pb-5
+                h2.pt3.pb-3 About Game 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, iusto sint repellat sequi eius quidem ad ipsam incidunt ex labore dolore ipsum voluptate alias rerum nesciunt quos excepturi fuga non. Dolorum aliquid officia deleniti dolore et, culpa exercitationem ratione temporibus unde debitis. Nesciunt architecto numquam earum consequatur animi quod maxime.
+            
+            .screen.pt-5.pb-5
+                h2.pt3.pb-3 ScreenShots
+                .d-flex.justify-content-center.gap-4.flex-wrap 
+                    div 
+                        img(src="images/img/screenshots1.jpg", alt="" class="w-100")
+                    div 
+                        img(src="images/img/screenshots2.jpg", alt="" class="w-100")
+                    div 
+                        img(src="images/img/screenshots3.jpg", alt="" class="w-100")
+            
+            .download.pt-5.pb-2
+                h2.text-center.pt3.pb-3 Download Links 
+                ul.d-flex.justify-content-center.align-items-center.gap-3.m-0 
+                    li.bg-danger For Android
+                    li.bg-danger For Ios
+                    li.bg-danger For Windows
+
+
+block scripts
+        script(src='js/description.js')
+
+

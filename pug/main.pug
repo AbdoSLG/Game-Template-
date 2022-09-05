@@ -1,0 +1,34 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title template 13
+        link(rel='stylesheet' href='css/all.min.css')
+        link(rel='stylesheet' href='css/bootstrap.min.css')
+        link(rel='stylesheet' href='sass/main.css')
+    body 
+        //- start header
+        include _header.pug
+        //- end header
+
+
+        //- start content
+        block content
+            include _content.pug
+        //- end contet
+
+
+
+        
+        //- start footer
+        include _footer.pug
+        //- end footer
+
+
+
+        script(src='js/all.min.js')
+        script(src='js/bootstrap.bundle.min.js')
+        block scripts
+            script(src='js/main.js')

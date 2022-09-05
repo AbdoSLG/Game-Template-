@@ -1,0 +1,12 @@
+.header 
+    .after
+    .container 
+        .logo(class="text-uppercase") game 
+            span(class="red") store 
+        ul.list 
+            li(class="bell") <i class="fa-solid fa-bell "></i>
+            li <i class="fa-solid fa-download"></i>
+            li(class="bars") <i class="fa-solid fa-bars "></i>
+        ul.drop-menu 
+            each val in["configration your game download successfully" , "could not apply changes"]
+                li=val

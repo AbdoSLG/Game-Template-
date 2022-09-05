@@ -1,0 +1,58 @@
+$main-color:rgb(22 13 39);
+$red: #dc1c1c;
+
+@use "mixens.scss" as *;
+
+.content2{
+    margin: 4rem 0 0 0;
+    background-color: $main-color;
+    .container{
+        .vid{
+            video{
+                width: 100%;
+                filter: drop-shadow(2px 4px 6px black);
+            }
+        }
+        .text{
+            h2{
+                border-bottom: 3px solid #dc1c1c;
+                width: fit-content;
+                height: 44px;
+                margin: 0 0 38px 0;
+            }
+        }
+        .screen{
+            h2{
+                border-bottom: 3px solid #dc1c1c;
+                width: fit-content;
+                height: 44px;
+                margin: 0 0 38px 0;
+            }
+            .d-flex{
+                div{
+                    width: 217px;
+                    height: 350px;
+                    img{
+                        object-fit: cover;
+                        height: 100%;
+                    }
+                }
+            }
+        }
+        .download{
+            ul{
+                li{
+                    width: 130px;
+                    height: 50px;
+                    @extend %center;
+                    cursor: pointer;
+                    transition: .3s;
+                    &:hover{
+                        background-color: rgb(20, 130, 139) !important;
+                        color: white;
+                    }
+                }
+            }
+        }
+    }
+}

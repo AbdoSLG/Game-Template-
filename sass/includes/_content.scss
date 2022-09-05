@@ -1,0 +1,253 @@
+$main-color:rgb(22 13 39);
+$red: #dc1c1c;
+
+@use "mixens.scss" as *;
+
+.overlay{
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(5 7 24 / 82%);
+    z-index: 5001;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    font-size: 20px;
+    top: 0;
+    left: 0%;
+    .links{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: end;
+        height: 236px;
+        padding: 0;
+        margin: 0;
+        font-size: 22px;
+        a{
+            display: block;
+            color: white;
+            text-transform: capitalize;
+            border-bottom: 4px solid transparent;
+            transition: .3s;
+            &:hover{
+                border-bottom: 4px solid red
+            }
+        }
+    }
+    #close{
+        position: fixed;
+        top: 10px;
+        right: 50px;
+        width: 50px;
+        height: 46px;
+        background-color: rgb(68 59 82);
+        @extend %center;
+        border-radius: 50%;
+        cursor: pointer;
+        font-weight: 700;
+        transition: .3s;
+        &:hover{
+            color:red;
+        }
+    }
+}
+
+// start home
+.home{
+    margin: 70px 0 0;
+    height: 100vh;
+    background-color: $main-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 100%;
+    }
+    .content{
+        position: absolute;
+        color: black;
+        top: 50%;
+        right: 20%;
+        font-size: 24px;
+        font-weight: bold;
+        display: flex;
+        flex-direction: column;
+        align-items: end;
+        text-transform:uppercase;
+        .btn{
+            background-color: #ec3535;
+            color: white;
+            border-radius: 0%;
+            position: relative;
+            &:hover{
+                background-color: $main-color;
+
+            }
+            &::after{
+                position: absolute;
+                content: "";
+                width: 0;
+                height: 0;
+                border: 14px solid transparent;
+                left: -15px;
+                border-top-color: aliceblue;
+                bottom: -15px;
+                transform: rotate(45deg);
+            }
+        }
+    }
+}
+// end home
+// start trending 
+.trending{
+    background-color: $main-color;
+    color: white;
+    .container{
+            position: relative;
+
+            .r-btn{
+                position: absolute;
+                font-size: 30px;
+                color: white;
+                right: -15px;
+                top: 61%;
+                transform: translateY(-50%);
+                background-color: $red;
+                padding: 0 13px 9px;
+                height: 47px;
+                @extend %center;
+                z-index: 5;
+                cursor: pointer;
+                box-shadow: 0 0 10px 1px black;
+            }
+            .l-btn{
+                box-shadow: 0 0 10px 1px black;
+                position: absolute;
+                font-size: 30px;
+                color: white;
+                left: -15px;
+                top: 60%;
+                transform: translateY(-50%);
+                background-color: $red;
+                padding: 0 13px 9px;
+                height: 47px;
+                @extend %center;
+                z-index: 5;
+                cursor: pointer;
+            }
+        
+            .cont{
+                overflow: hidden;
+                width: 100%;
+
+            }
+
+            .head{
+                width: 260px;
+                svg{
+                    padding: 12px;
+                    border-radius: 50%;
+                    background-color: $red;
+                }
+                }       
+            .boxs{
+                position: relative;
+                transition: .4s;
+                .box{
+                    width: 220px !important;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    img{
+                        width: 220px;
+                        border-radius: 6px;
+                        height: 100% !important;
+                    }
+                    .up{
+                        background-color: #000000ad;
+                        padding: 14px;
+                        bottom: 0;
+                        .rate{
+                            padding: 7px 12px;
+                            color: #ffdf00;
+                            background-color: #999999;
+                        }
+                        .down{
+                            background-color: white !important;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            padding: 5px;
+                            @extend %center;
+                            transition: .3s;
+                            &:hover{
+                                background-color: $main-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+// end trending 
+// start new games 
+.newGames{
+    background-color: $main-color;
+    color: white;
+    .container{
+            position: relative;
+            .head{
+                width: 260px;
+                svg{
+                    padding: 12px;
+                    border-radius: 50%;
+                    background-color: $red;
+                }
+                }       
+            .boxs{
+                position: relative;
+                .box{
+                    width: 220px !important;
+                    border-radius: 6px;
+                    cursor: pointer;
+                    img{
+                        width: 220px;
+                        height: 330px;
+                        object-fit: cover;
+                        border-radius: 6px;
+                    }
+                    .up{
+                        background-color: #000000ad;
+                        padding: 14px;
+                        bottom: 0;
+                        .rate{
+                            padding: 7px 12px;
+                            color: #ffdf00;
+                            background-color: #999999;
+                        }
+                        .down{
+                            background-color: white !important;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 50%;
+                            cursor: pointer;
+                            padding: 5px;
+                            @extend %center;
+                            transition: .3s;
+                            &:hover{
+                                background-color: $main-color !important;
+                            }
+                        }
+                    }
+                }
+            }
+    }
+}
+
+// end new games 
+
+.bt{
+    background-color: $main-color ;
+}

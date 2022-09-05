@@ -1,0 +1,9 @@
+$main-color:rgb(22 13 39);
+$red: #dc1c1c;
+.footer{
+    background-color: $main-color;
+    color: white;
+    span{
+        color: $red;
+    }
+}

@@ -1,0 +1,419 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  width: 88%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a {
+  text-decoration: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 5000;
+  background-color: rgb(22, 13, 39);
+  color: white;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+}
+.header .after {
+  width: 0;
+  left: 0;
+  height: 4.5px;
+  background-color: #dc1c1c;
+  top: 0%;
+  position: fixed;
+}
+.header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header .logo span {
+  color: #dc1c1c;
+}
+.header .list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 150px;
+  margin: 0;
+  padding: 0;
+}
+.header .list li {
+  cursor: pointer;
+  background-color: #2c2c2c;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.header .list li.bell:hover {
+  -webkit-animation: routate 0.5s infinite linear;
+          animation: routate 0.5s infinite linear;
+}
+.header .drop-menu {
+  position: absolute;
+  background-color: #2f3247;
+  right: 54px;
+  border: 0;
+  top: 70px;
+  width: 280px;
+  border-radius: 6px;
+  height: 193px;
+  font-weight: normal;
+  padding: 7px 0;
+  display: none;
+}
+.header .drop-menu.show {
+  display: block;
+}
+.header .drop-menu li {
+  margin: 8px 0;
+  padding: 0 36px;
+  position: relative;
+  cursor: pointer;
+  background-color: #25052d;
+}
+.header .drop-menu li::after {
+  position: absolute;
+  content: "";
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 20px;
+  background-color: #dc1c1c;
+  border-radius: 50%;
+}
+
+@-webkit-keyframes routate {
+  0%, 100% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+}
+
+@keyframes routate {
+  0%, 100% {
+    transform: rotate(30deg);
+  }
+  50% {
+    transform: rotate(-30deg);
+  }
+}
+.content2 .container .download ul li, .overlay #close, .trending .container .r-btn, .trending .container .l-btn, .trending .container .boxs .box .up .down, .newGames .container .boxs .box .up .down {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(5, 7, 24, 0.82);
+  z-index: 5001;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: white;
+  font-size: 20px;
+  top: 0;
+  left: 0%;
+}
+.overlay .links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: end;
+  height: 236px;
+  padding: 0;
+  margin: 0;
+  font-size: 22px;
+}
+.overlay .links a {
+  display: block;
+  color: white;
+  text-transform: capitalize;
+  border-bottom: 4px solid transparent;
+  transition: 0.3s;
+}
+.overlay .links a:hover {
+  border-bottom: 4px solid red;
+}
+.overlay #close {
+  position: fixed;
+  top: 10px;
+  right: 50px;
+  width: 50px;
+  height: 46px;
+  background-color: rgb(68, 59, 82);
+  border-radius: 50%;
+  cursor: pointer;
+  font-weight: 700;
+  transition: 0.3s;
+}
+.overlay #close:hover {
+  color: red;
+}
+
+.home {
+  margin: 70px 0 0;
+  height: 100vh;
+  background-color: rgb(22, 13, 39);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home img {
+  width: 100%;
+}
+.home .content {
+  position: absolute;
+  color: black;
+  top: 50%;
+  right: 20%;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  text-transform: uppercase;
+}
+.home .content .btn {
+  background-color: #ec3535;
+  color: white;
+  border-radius: 0%;
+  position: relative;
+}
+.home .content .btn:hover {
+  background-color: rgb(22, 13, 39);
+}
+.home .content .btn::after {
+  position: absolute;
+  content: "";
+  width: 0;
+  height: 0;
+  border: 14px solid transparent;
+  left: -15px;
+  border-top-color: aliceblue;
+  bottom: -15px;
+  transform: rotate(45deg);
+}
+
+.trending {
+  background-color: rgb(22, 13, 39);
+  color: white;
+}
+.trending .container {
+  position: relative;
+}
+.trending .container .r-btn {
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  right: -15px;
+  top: 61%;
+  transform: translateY(-50%);
+  background-color: #dc1c1c;
+  padding: 0 13px 9px;
+  height: 47px;
+  z-index: 5;
+  cursor: pointer;
+  box-shadow: 0 0 10px 1px black;
+}
+.trending .container .l-btn {
+  box-shadow: 0 0 10px 1px black;
+  position: absolute;
+  font-size: 30px;
+  color: white;
+  left: -15px;
+  top: 60%;
+  transform: translateY(-50%);
+  background-color: #dc1c1c;
+  padding: 0 13px 9px;
+  height: 47px;
+  z-index: 5;
+  cursor: pointer;
+}
+.trending .container .cont {
+  overflow: hidden;
+  width: 100%;
+}
+.trending .container .head {
+  width: 260px;
+}
+.trending .container .head svg {
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #dc1c1c;
+}
+.trending .container .boxs {
+  position: relative;
+  transition: 0.4s;
+}
+.trending .container .boxs .box {
+  width: 220px !important;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.trending .container .boxs .box img {
+  width: 220px;
+  border-radius: 6px;
+  height: 100% !important;
+}
+.trending .container .boxs .box .up {
+  background-color: rgba(0, 0, 0, 0.6784313725);
+  padding: 14px;
+  bottom: 0;
+}
+.trending .container .boxs .box .up .rate {
+  padding: 7px 12px;
+  color: #ffdf00;
+  background-color: #999999;
+}
+.trending .container .boxs .box .up .down {
+  background-color: white !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+}
+.trending .container .boxs .box .up .down:hover {
+  background-color: rgb(22, 13, 39) !important;
+}
+
+.newGames {
+  background-color: rgb(22, 13, 39);
+  color: white;
+}
+.newGames .container {
+  position: relative;
+}
+.newGames .container .head {
+  width: 260px;
+}
+.newGames .container .head svg {
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #dc1c1c;
+}
+.newGames .container .boxs {
+  position: relative;
+}
+.newGames .container .boxs .box {
+  width: 220px !important;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.newGames .container .boxs .box img {
+  width: 220px;
+  height: 330px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 6px;
+}
+.newGames .container .boxs .box .up {
+  background-color: rgba(0, 0, 0, 0.6784313725);
+  padding: 14px;
+  bottom: 0;
+}
+.newGames .container .boxs .box .up .rate {
+  padding: 7px 12px;
+  color: #ffdf00;
+  background-color: #999999;
+}
+.newGames .container .boxs .box .up .down {
+  background-color: white !important;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+  padding: 5px;
+  transition: 0.3s;
+}
+.newGames .container .boxs .box .up .down:hover {
+  background-color: rgb(22, 13, 39) !important;
+}
+
+.bt {
+  background-color: rgb(22, 13, 39);
+}
+
+.footer {
+  background-color: rgb(22, 13, 39);
+  color: white;
+}
+.footer span {
+  color: #dc1c1c;
+}
+
+.content2 {
+  margin: 4rem 0 0 0;
+  background-color: rgb(22, 13, 39);
+}
+.content2 .container .vid video {
+  width: 100%;
+  filter: drop-shadow(2px 4px 6px black);
+}
+.content2 .container .text h2 {
+  border-bottom: 3px solid #dc1c1c;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 44px;
+  margin: 0 0 38px 0;
+}
+.content2 .container .screen h2 {
+  border-bottom: 3px solid #dc1c1c;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  height: 44px;
+  margin: 0 0 38px 0;
+}
+.content2 .container .screen .d-flex div {
+  width: 217px;
+  height: 350px;
+}
+.content2 .container .screen .d-flex div img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+.content2 .container .download ul li {
+  width: 130px;
+  height: 50px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.content2 .container .download ul li:hover {
+  background-color: rgb(20, 130, 139) !important;
+  color: white;
+}/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,97 @@
+$main-color:rgb(22 13 39);
+$red: #dc1c1c;
+.header{
+    position: fixed;
+    top: 0;
+    z-index: 5000;
+    background-color: $main-color;
+    color: white;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    .after{
+        width: 0;
+        left: 0;
+        height: 4.5px;
+        background-color: $red;
+        top: 0%;
+        position: fixed;
+    }
+    .container{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+    }
+    .logo span{
+        color: $red;
+    }
+    .list{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 150px;
+        margin: 0;
+        padding: 0;
+        li{
+            cursor: pointer;
+            background-color: #2c2c2c;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &.bell:hover{
+                animation:routate .5s  infinite  linear;
+            }
+        }
+    }
+    .drop-menu{
+        position: absolute;
+        background-color: #2f3247;
+        right: 54px;
+        border: 0;
+        top: 70px;
+        width: 280px;
+        border-radius: 6px;
+        height: 193px;
+        font-weight: normal;
+        padding: 7px 0;
+        display: none;
+        &.show{
+            display: block;
+        }
+        li{
+            margin: 8px 0;
+            padding: 0 36px;
+            position: relative;
+            cursor: pointer;
+            background-color: #25052d;
+            &::after{
+                position: absolute;
+                content: "";
+                left: 4px;
+                top: 50%;
+                transform: translateY(-50%);
+                width: 20px;
+                height: 20px;
+                background-color: #dc1c1c;
+                border-radius: 50%;
+            }
+        }
+    }
+}
+@keyframes routate{
+    0% , 100%{
+        transform: rotate(30deg);
+    }
+    50%{
+        transform: rotate(-30deg);
+        
+    }
+
+}
